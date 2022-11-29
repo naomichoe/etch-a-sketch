@@ -24,12 +24,18 @@ function changeColor(e) {
     e.target.style.backgroundColor = "gray";
 }
 
+//everything works until I choose a number then the createGrid function gets called but the new grid size is off - must fix
 function changeGridSize() {
     let gridSize = prompt('Enter a number between 1-99');
     if (gridSize < 1 | gridSize > 99) {
         alert('Enter appropiate number');
     }
-    return console.log(gridSize);
+    return createGrid(gridSize);
+}
+
+//need to figure out how to clear the entire grid onclick of the clear btn
+function clearGrid(e) {
+
 }
 
 
@@ -37,3 +43,7 @@ function changeGridSize() {
 window.onload = () => {
     createGrid(defaultSize);
 }
+
+
+//once I finish and fix the above then the original project is complete
+//extra credit is to change the color from black to random RGB value
