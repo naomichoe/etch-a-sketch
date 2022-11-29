@@ -21,8 +21,8 @@ div.grid-container {
 
 div div.grid {
     border: 0.01rem solid black;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 }
 
 .active-grid {
