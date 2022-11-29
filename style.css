@@ -3,3 +3,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+div.grid-container {
+    border: 0.01rem solid rgb(0, 0, 0);
+    margin-bottom: 30px;
+    /* max-width: 500px; */
+    display: grid;
+}
+
+div div.grid {
+    border: 0.01rem solid black;
+    width: 20px;
+    height: 20px;
+}
+
+.active-grid {
+    background-color: black;
+}
+
+button {
+    margin-bottom: 20px;
+}

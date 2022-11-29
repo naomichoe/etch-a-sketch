@@ -1,12 +1,18 @@
 //create divs for the board
-let createBoard = function(num) {
+const createGrid = function(num) {
     let correctGridNum = num * num;
-    let gridContainer = document.getElementById('grid-container');
-    while (correctGridNum >= 0) {
+    let gridContainer = document.querySelector('.grid-container');
+    gridContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${num}, 1fr)`;
+    
+    while (correctGridNum > 0) {
         let newDiv = gridContainer.appendChild(document.createElement('div'));
         newDiv.setAttribute('class', 'grid')
         correctGridNum--;
     }
-    
 }
-createBoard(16);
+
+createGrid(16);
+
+// // mouseover event
+
