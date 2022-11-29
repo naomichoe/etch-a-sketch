@@ -1,7 +1,10 @@
-const resizeBtn = document.querySelector(".resize-btn");
+// const resizeBtn = document.querySelector(".resize-btn");
+const defaultSize = 16;
+
+
 
 //create divs for the board
-const createGrid = function(num) {
+function createGrid(num) {
     const correctGridNum = num * num;
     const gridContainer = document.querySelector('.grid-container');
     gridContainer.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
@@ -14,9 +17,23 @@ const createGrid = function(num) {
     }
 }
 
-createGrid(16);
+//test grid
+// createGrid(16);
 
 function changeColor(e) {
-    e.target.style.backgroundColor = "black";
+    e.target.style.backgroundColor = "gray";
 }
 
+function changeGridSize() {
+    let gridSize = prompt('Enter a number between 1-99');
+    if (gridSize < 1 | gridSize > 99) {
+        alert('Enter appropiate number');
+    }
+    return console.log(gridSize);
+}
+
+
+//default grid on load
+window.onload = () => {
+    createGrid(defaultSize);
+}
