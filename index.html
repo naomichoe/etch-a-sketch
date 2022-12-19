@@ -9,7 +9,11 @@
 </head>
 <body>
     <div class="main-container">
-        <button class="btn">Clear</button>
+        <div class="btn-container">
+            <input type="text" placeholder="1-99">
+            <button onclick="changeGridSize()" class="resize-btn">Grid Size</button>
+            <button class="clear-btn">Clear</button>
+        </div>
         <div class="grid-container"></div>
     </div>
     <script src="javascript.js"></script>
